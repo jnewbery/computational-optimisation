@@ -7,6 +7,7 @@ app = marimo.App()
 
 @app.cell
 def _():
+    # Core imports used across the notebook.
     import marimo as mo
     import numpy as np
     import plotly.graph_objects as go
@@ -16,6 +17,7 @@ def _():
 
 @app.cell
 def _(mo):
+    # UI controls for the plotting domain and resolution.
     x_min = mo.ui.slider(
         -5.0,
         5.0,
@@ -44,6 +46,7 @@ def _(mo):
 
 @app.cell
 def _(np, n_points, x_max, x_min):
+    # Generate x values and evaluate h(x), g(x), and f(x)=g(h(x)).
     xmin = float(x_min.value)
     xmax = float(x_max.value)
     if xmin > xmax:
@@ -57,6 +60,7 @@ def _(np, n_points, x_max, x_min):
 
 @app.cell
 def _(f, g, go, h, x):
+    # Plot the three curves together for comparison.
     fig = go.Figure()
     fig.add_trace(go.Scatter(x=x, y=h, mode="lines", name="h(x)=e^x"))
     fig.add_trace(go.Scatter(x=x, y=g, mode="lines", name="g(x)=-sqrt(x)"))

@@ -7,6 +7,7 @@ app = marimo.App()
 
 @app.cell
 def _():
+    # Core imports used across the notebook.
     import marimo as mo
     import numpy as np
     import plotly.graph_objects as go
@@ -16,6 +17,7 @@ def _():
 
 @app.cell
 def _(mo):
+    # UI controls for the plotting domain and grid resolution.
     x_range = mo.ui.slider(
         1,
         5,
@@ -37,6 +39,7 @@ def _(mo):
 
 @app.cell
 def _(np, n_points, x_range):
+    # Build the grid and evaluate f(x1, x2) on it.
     x1 = np.linspace(-x_range.value, x_range.value, n_points.value)
     x2 = np.linspace(-x_range.value, x_range.value, n_points.value)
     X1, X2 = np.meshgrid(x1, x2)
@@ -46,6 +49,7 @@ def _(np, n_points, x_range):
 
 @app.cell
 def _(X1, X2, Z, go):
+    # Render the 3D surface plot.
     fig = go.Figure(
         data=[
             go.Surface(
