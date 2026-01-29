@@ -8,4 +8,8 @@ dependencies = [
     "marimo>=0.19.4",
     "matplotlib>=3.10.8",
     "plotly>=6.5.2",
+    "poethepoet>=0.38.0",
 ]
+[tool.poe.tasks]
+edit = "marimo edit notebooks"
+run = "server.py"
