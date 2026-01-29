@@ -54,7 +54,7 @@ def show_index(ast, mo, pathlib):
     table_rows = "\n".join(f"| {title} | {description} |" for title, description in rows)
     table = "\n".join(
         [
-            "| Report | Description |",
+            "| Notebook | Description |",
             "|:--- |:--- |",
             table_rows,
         ]
