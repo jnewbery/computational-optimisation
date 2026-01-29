@@ -1,3 +1,7 @@
+"""title: Quartic Valley Surface
+description: Surface for $f(x_1, x_2)=(x_2-x_1^2)(x_2-2x_1^2)$.
+"""
+
 import marimo
 
 __generated_with = "0.19.4"

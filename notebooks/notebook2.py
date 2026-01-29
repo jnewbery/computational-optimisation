@@ -1,3 +1,7 @@
+"""title: Function Composition Curves
+description: Plots $h(x)=e^x$, $g(x)=-\\sqrt{x}$, and $f(x)=g(h(x))$.
+"""
+
 import marimo
 
 __generated_with = "0.19.4"

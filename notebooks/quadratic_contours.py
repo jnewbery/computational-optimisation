@@ -1,5 +1,5 @@
 """title: Quadratic Contours
-description: Contour plot of f(x1, x2)=1/2 (x1^2 + gamma x2^2) with adjustable gamma.
+description: Contour plot of $f(x_1, x_2)=\\frac{1}{2} ({x_1}^2 + \\gamma\\cdot{x_2}^2)$ with adjustable $\\gamma$.
 """
 
 import marimo

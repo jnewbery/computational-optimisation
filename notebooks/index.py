@@ -37,7 +37,7 @@ def show_index(ast, mo, pathlib):
                     description = stripped.split(":", 1)[1].strip()
         return title, description
 
-    # 3. Generate Markdown table rows
+    # 3. Generate Markdown table rows (markdown/LaTeX-friendly).
     # We assume the server maps "filename.py" -> "/filename"
     rows = []
     for nb in notebooks:
@@ -59,6 +59,7 @@ def show_index(ast, mo, pathlib):
             table_rows,
         ]
     )
+    table_md = f"\n{table}\n"
     mo.vstack([
         mo.md(
         """
@@ -67,7 +68,7 @@ def show_index(ast, mo, pathlib):
 
         ---
         """),
-        mo.md(table)
+        mo.md(table_md)
     ])
     return
 
